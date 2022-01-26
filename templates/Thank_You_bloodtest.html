@@ -21,7 +21,9 @@
             <p> Please click below to check details</p>
             <div class="popup center">
                 <div class="icon">
-                    {{sno}}
+                    {% for b in allbloodtest %}
+                    {{b.sno}}
+                    {% endfor %}
                 </div>
                 <div class="title">
                     Token NO.

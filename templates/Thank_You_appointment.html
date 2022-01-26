@@ -21,13 +21,16 @@
             <p> Please click below to check your token number</p>
             <div class="popup center">
                 <div class="icon">
-                    {{sno}}
+                    {% for b in allappointment %}
+                    {{b.sno}}
+                    {% endfor %}
+                    
                 </div>
                 <div class="title">
                     Token NO.
                 </div>
                 <div class="description">
-                    please visit the hospital in the time period {{visit_time}}.<br> On {{date}} for your appointment with {{physician}} </div>
+                     please visit the hospital in the time period {{visit_time}}.<br> On {{date}} for your appointment with {{physician}} </div>
                 <div class="dismiss-btn">
                     <a href="{{ url_for ('index')}}" class="Hospital-btn1"> Return to Home page</a>
         
