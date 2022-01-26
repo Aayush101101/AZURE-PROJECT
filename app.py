@@ -53,6 +53,7 @@ class bloodtest_db(db.Model):
     def __repr__(self) -> str:
         return f"{self.sno} - {self.fname} - {self.lname} - {self.date_} - {self.visit_time}"
 
+db.create_all()
 @app.route("/",methods=['GET','POST'])
 def index():
    
